@@ -1,18 +1,19 @@
-import Idioma from '../Idioma';
-import logo from './assts/logo.png';
+import './Cabecera.css';
+import logo from '../../assets/logo.png';
+import Idiomas from '../idiomas/Idiomas';
 
 const cabecera = () => {
 
     return (
-        <div className="row">
+        <div className="row cabecera">
             <div className='col-md-1'>
-                <img className="img" src='./assets/logo.png' alt=""/>
+                <img className="w-100" src={logo} alt=""/>
             </div>
             <div className='col-md-10 text-center'>
                 <h1>Marca Personal</h1>
             </div>
             <div className='col-md-1'>
-                <Idioma></Idioma>
+                <Idiomas></Idiomas>
             </div>
         </div>
     );
