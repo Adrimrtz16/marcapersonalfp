@@ -1,0 +1,21 @@
+.naranja{
+    background-color: #f59432;
+}
+
+.azul {
+    background-color: #364f59;
+    color: white
+}
+
+img {
+    width: 35px;
+    margin: 0 0.3%;
+}
+
+.margen {
+    margin: 0 0.5%;
+}
+
+.tamaño-footer{
+    height: 60px;
+}

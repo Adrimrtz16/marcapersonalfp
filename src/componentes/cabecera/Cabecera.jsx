@@ -10,7 +10,7 @@ const cabecera = () => {
                 <img className="w-100" src={logo} alt=""/>
             </div>
             <div className='col-md-10 text-center'>
-                <h1>Marca Personal</h1>
+                <h1>Marca Personal FP</h1>
             </div>
             <div className='col-md-1'>
                 <Idiomas></Idiomas>

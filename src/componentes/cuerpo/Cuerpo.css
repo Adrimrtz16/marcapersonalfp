@@ -6,14 +6,9 @@ img {
     width: 80%;
 }
 
-.red {
-    background-color: red;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.green {
-    background-color: green;
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
 }
