@@ -11,9 +11,7 @@ const menu = (props) => {
             <div className="card">
                 <div className="first-content">
                     <span>
-                        <a className='d-flex justify-content-center' href="">
-                            <img className='imagen' src={props.imagen} alt="" />
-                        </a>
+                       <img className='imagen' src={props.imagen} alt="" />
                     </span>
                 </div>
                 <div className="second-content">

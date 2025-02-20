@@ -3,19 +3,26 @@ import colegio from '../../assets/school.jpg';
 import estudiante from '../../assets/student.jpg';
 import Menu from '../menu/Menu';
 import './Cuerpo.css';
+import { Link } from 'react-router-dom';
 
 const cuerpo = () => {
 
     return (
         <div className="row">
             <div className="col-4 menu">
-                <Menu className="" imagen={empresa} texto={'Empresas'}></Menu>
+                <Link to="/empresa" className='link'>
+                    <Menu className="" imagen={empresa} texto={'Empresas'}></Menu>
+                </Link>
             </div>
             <div className="col-4 menu">
-                <Menu className="" imagen={colegio} texto={'Centro educativo'}></Menu>   
+                <Link to="/centroeducativo" className='link'>
+                    <Menu className="" imagen={colegio} texto={'Centro educativo'}></Menu>  
+                </Link> 
             </div>
             <div className="col-4 menu">
-                <Menu className="" imagen={estudiante} texto={'Estudiantes'}></Menu>
+                <Link to="/estudiante" className='link'>
+                    <Menu className="" imagen={estudiante} texto={'Estudiantes'}></Menu>
+                </Link>
             </div>
         </div>
     )
