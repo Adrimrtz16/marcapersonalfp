@@ -5,8 +5,11 @@ import twitter from '../../assets/twitter.svg'
 import tiktok from '../../assets/tiktok.svg'
 import youtube from '../../assets/youtube.svg'
 import logoReves from '../../assets/logoReves.png'
+import useContador from '../../hooks/useContador'
 
 const pie = (props) => {
+
+    const contadores = useContador();
 
     return (
         <>
@@ -16,15 +19,15 @@ const pie = (props) => {
                     <div className='row'>
                         <div className='col-md-4 text-center'>
                             <h4>Empresas</h4>
-                            <h2>0</h2> 
+                            <h2>{contadores.numEmpresas}</h2> 
                         </div>
                         <div className='col-md-4 text-center'>
                             <h4>Centros educativos</h4>       
-                            <h2>0</h2> 
+                            <h2>{contadores.numCentros}</h2> 
                         </div>
                         <div className='col-md-4 text-center'>
                             <h4>Estudiantes</h4>
-                            <h2>0</h2> 
+                            <h2>{contadores.numEstudiantes}</h2> 
                         </div>
                     </div>
                 </div>
