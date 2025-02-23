@@ -5,6 +5,8 @@ import Empresa from './paginas/empresa/Empresa'
 import Centro from './paginas/centro/Centro'
 import Estudiante from './paginas/estudiante/Estudiante'
 import {Routes, Route} from 'react-router-dom'
+import EmpresaProyectos from './paginas/empresaProyectos/EmpresaProyectos'
+import EmpresaAlumnos from './paginas/empresaAlumnos/EmpresaAlumnos'
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
       <Routes>
         <Route path="" element={<Home></Home>}></Route>
         <Route path="/empresa" element={<Empresa></Empresa>}></Route>
+        <Route path="/empresa/proyectos" element={<EmpresaProyectos></EmpresaProyectos>}></Route>
+        <Route path="/empresa/alumnos" element={<EmpresaAlumnos></EmpresaAlumnos>}></Route>
         <Route path="/centroeducativo" element={<Centro></Centro>}></Route>
         <Route path="/estudiante" element={<Estudiante></Estudiante>}></Route>
       </Routes>

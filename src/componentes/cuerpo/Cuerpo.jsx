@@ -5,7 +5,7 @@ import Menu from '../menu/Menu';
 import './Cuerpo.css';
 import { Link } from 'react-router-dom';
 
-const cuerpo = () => {
+const Cuerpo = () => {
 
     return (
         <div className="row">
@@ -29,4 +29,4 @@ const cuerpo = () => {
 
 }
 
-export default cuerpo;
+export default Cuerpo;

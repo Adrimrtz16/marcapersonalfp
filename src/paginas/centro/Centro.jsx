@@ -1,14 +1,12 @@
-import './Centro.css';
+import MenuGeneral from "../../componentes/menuGeneral/MenuGeneral";
 
-const centro = () => {
+const Centro = () => {
 
     return (
-        <div className="row">
-            <div className="col-md-12">
-                <h1 className='centro'>Centro</h1>
-            </div>
+        <div>
+            <MenuGeneral></MenuGeneral>
         </div>
     )
 }
 
-export default centro;
+export default Centro;

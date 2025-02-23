@@ -1,15 +1,15 @@
-import './Empresa.css'; 
+import MenuGeneral from '../../componentes/menuGeneral/MenuGeneral';
+import MenuEmpresa from '../../componentes/menuEmpresa/MenuEmpresa';
 
-const empresa = () => {
+const Empresa = () => {
 
     return (
-        <div className="row">
-            <div className="col-md-12">
-                <h1 className='empresa'>Empresa</h1>
-            </div>
+        <div>
+            <MenuGeneral></MenuGeneral>
+            <MenuEmpresa></MenuEmpresa>
         </div>
     )
 
 }
 
-export default empresa;
+export default Empresa;

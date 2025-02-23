@@ -6,7 +6,7 @@ const useContador = () => {
 
     const [contador, setContador] = useState({
         numEmpresas : 0,
-        numCentros : 0,
+        numProyectos : 0,
         numEstudiantes : 0
     });
 
@@ -25,7 +25,7 @@ const useContador = () => {
             setContador(contadores => {
                 return {
                     ...contadores,
-                    numCentros: valor.count
+                    numProyectos: valor.count
                 }
             });
         });

@@ -2,7 +2,7 @@ import './Idiomas.css';
 import español from '../../assets/spain.svg';
 import ingles from '../../assets/uk.svg';
 
-const idiomas = () => {
+const Idiomas = () => {
 
     return (
         <div className='d-flex w-100'>
@@ -12,4 +12,4 @@ const idiomas = () => {
     );
 }
 
-export default idiomas;
+export default Idiomas;

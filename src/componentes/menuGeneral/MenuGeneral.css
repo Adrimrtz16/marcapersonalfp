@@ -1,0 +1,19 @@
+.linksMenu{
+    text-align: left;
+    margin: 0 auto;
+    padding: 7px;
+}
+
+.gris {
+    background-color: #efefef;
+}
+
+.paginaActual {
+    color: #f59432 !important;
+}
+
+.linkMenu {
+    text-decoration: none;
+    color: rgb(52, 52, 52);
+    margin: 10px;
+}

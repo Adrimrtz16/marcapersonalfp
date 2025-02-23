@@ -1,15 +1,13 @@
-import './Estudiante.css';
+import MenuGeneral from "../../componentes/menuGeneral/MenuGeneral";
 
-const estudiante = () => {
+const Estudiante = () => {
 
     return (
-        <div className="row">
-            <div className="col-md-12">
-                <h1 className='estudiante'>Estudiante</h1>
-            </div>
+        <div>
+            <MenuGeneral></MenuGeneral>
         </div>
     )
 
 }
 
-export default estudiante;
+export default Estudiante;

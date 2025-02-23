@@ -1,7 +1,7 @@
 import Cuerpo from '../../componentes/cuerpo/Cuerpo';
 import Pie from '../../componentes/pie/Pie';
 
-const home = () => {
+const Home = () => {
 
     return (
         <div>
@@ -11,4 +11,4 @@ const home = () => {
     )
 }    
 
-export default home;
+export default Home;

@@ -4,7 +4,7 @@ import './Menu.css';
 
 const StyledWrapper = styled.div``;
 
-const menu = (props) => {
+const Menu = (props) => {
 
     return (
         <StyledWrapper>
@@ -22,4 +22,4 @@ const menu = (props) => {
     );
 }
 
-export default menu;
+export default Menu;

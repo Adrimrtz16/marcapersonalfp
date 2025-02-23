@@ -7,7 +7,7 @@ import youtube from '../../assets/youtube.svg'
 import logoReves from '../../assets/logoReves.png'
 import useContador from '../../hooks/useContador'
 
-const pie = (props) => {
+const Pie = (props) => {
 
     const contadores = useContador();
 
@@ -22,8 +22,8 @@ const pie = (props) => {
                             <h2>{contadores.numEmpresas}</h2> 
                         </div>
                         <div className='col-md-4 text-center'>
-                            <h4>Centros educativos</h4>       
-                            <h2>{contadores.numCentros}</h2> 
+                            <h4>Proyectos</h4>       
+                            <h2>{contadores.numProyectos}</h2> 
                         </div>
                         <div className='col-md-4 text-center'>
                             <h4>Estudiantes</h4>
@@ -67,4 +67,4 @@ const pie = (props) => {
     )
 }
 
-export default pie;
+export default Pie;
