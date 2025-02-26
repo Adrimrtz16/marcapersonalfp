@@ -1,21 +1,36 @@
-import useProyectos from '../../hooks/useFamiliasProfesional';
+import useProyectos from '../../hooks/useProyectos';
 import Proyecto from '../proyecto/Proyecto';
 import '../listaFamiliasProfesionales/ListaFamiliasProfesionales.css';
 
-const ListaProyectos = () => {
+const ListaProyectos = ({ codigosActivados }) => {
 
     const proyectos = useProyectos();
-    console.log(proyectos);
+
     function mostrarProyectos(proyecto) {
         
-        return <Proyecto 
-            key={proyecto.id} 
-            nombre={proyecto.nombre}
-            tutor={proyecto.docente_id} 
-            ciclos={proyecto.ciclos}
-            participantes={proyecto.participantes}>
-        </Proyecto>
+        if (codigosActivados.length === 0) {
+            return <Proyecto 
+                        key={proyecto.id} 
+                        nombre={proyecto.nombre}
+                        tutor={proyecto.docente_id} 
+                        ciclos={proyecto.ciclos}
+                        participantes={proyecto.participantes}>
+                    </Proyecto>
+        } else {
+            const tieneCicloActivado = proyecto.ciclos.some(ciclo => codigosActivados.includes(ciclo.codFamilia));
 
+            if (tieneCicloActivado) {
+                return <Proyecto 
+                            key={proyecto.id} 
+                            nombre={proyecto.nombre}
+                            tutor={proyecto.docente_id} 
+                            ciclos={proyecto.ciclos}
+                            participantes={proyecto.participantes}>
+                        </Proyecto>
+            }
+
+        }
+    
     }
 
     return (

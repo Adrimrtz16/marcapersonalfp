@@ -3,12 +3,16 @@ import './Proyecto.css'
 
 const FamiliaProfesional = (props) => {
 
-    console.log(props.participantes);
+    function mostrarParticipantes(participantes) {
+        return participantes.map((participante, index) => (
+            <p className='margen-alumnos' key={index}>{participante.name}</p>
+        ));
+    }
 
-    function mostrarAlumnos(participantes) {
-        participantes.map((participante) => {
-            return <p>{participante.nombre}</p>
-        })
+    function mostrarCiclos(ciclos) {
+        return ciclos.map((ciclo) => (
+            ciclo.codCiclo + ' '
+        ));
     }
 
     return (
@@ -22,7 +26,14 @@ const FamiliaProfesional = (props) => {
                     <div className='row'>
                         <div className='col-1'></div>
                         <div className='col-10 blanco'>
-                            {mostrarAlumnos(props.participantes)}
+                            <div className='row'>
+                                <div className='col-md-12 margen-alumnos'>
+                                    <p className='margen-lista-alumnos'><strong>Alumnos</strong></p>
+                                    {mostrarParticipantes(props.participantes)}
+                                    <p className='margen-lista-alumnos'><strong>Tutor: </strong>{props.tutor}</p>
+                                    <p className='margen-lista-alumnos'><strong>Ciclos: </strong>{mostrarCiclos(props.ciclos)}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

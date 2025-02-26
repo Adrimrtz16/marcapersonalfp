@@ -7,6 +7,11 @@ const FamiliaProfesional = (props) => {
 
     function activar() {
         setActivado(!activado)
+        if(!activado) {
+            props.actualizarCodigosActivados(props.codigo)
+        } else {
+            props.eliminarCodigoActivado(props.codigo)
+        }
     }
 
     return (

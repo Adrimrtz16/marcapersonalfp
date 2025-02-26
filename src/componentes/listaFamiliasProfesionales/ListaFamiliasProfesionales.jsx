@@ -1,14 +1,29 @@
+import { useState } from 'react';
 import useFamiliaProfesional from '../../hooks/useFamiliasProfesional';
 import FamiliaProfesional from '../familiaProfesional/FamiliaProfesional';
 import './ListaFamiliasProfesionales.css';
 
-const ListaFamiliasProfesionales = () => {
+const ListaFamiliasProfesionales = ({ codigosActivados, setCodigosActivados }) => {
 
     const FamiliasProfesionales = useFamiliaProfesional();
 
+    function actualizarCodigosActivados(codigo) {
+        setCodigosActivados([...codigosActivados, codigo]);
+    };
+
+    function eliminarCodigoActivado(codigo) {
+        setCodigosActivados(codigosActivados.filter(codigoActivado => codigoActivado !== codigo));
+    }
+
     function mostrarFamilias(familia) {
         
-        return <FamiliaProfesional key={familia.id} familia={familia.nombre}></FamiliaProfesional>
+        return <FamiliaProfesional 
+            key={familia.id} 
+            familia={familia.nombre} 
+            codigo={familia.codigo}
+            actualizarCodigosActivados={actualizarCodigosActivados}
+            eliminarCodigoActivado={eliminarCodigoActivado}>
+        </FamiliaProfesional>
 
     }
 
