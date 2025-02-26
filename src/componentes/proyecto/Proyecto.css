@@ -1,7 +1,16 @@
 .img-proyecto{
-    padding: 2%;
+    padding: 10%;
+    width: 120%;
 }
 
 .margen-proyecto{
     margin: 4%;
+}
+
+.margen-titulo{
+    margin: 10%;
+}
+
+.proyecto {
+    min-height: 170px;
 }

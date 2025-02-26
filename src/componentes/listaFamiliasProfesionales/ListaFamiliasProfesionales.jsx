@@ -29,11 +29,6 @@ const ListaFamiliasProfesionales = () => {
                     {FamiliasProfesionales.map(mostrarFamilias)}
                 </div>
             </div>
-            <div className='row gris'>
-                <div className="col-md-12">
-                    <h5 className='titulo-busqueda'>Resultados</h5>
-                </div>
-            </div>
         </>
 
     )
