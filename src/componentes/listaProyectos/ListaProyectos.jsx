@@ -1,10 +1,11 @@
 import useProyectos from '../../hooks/useProyectos';
 import Proyecto from '../proyecto/Proyecto';
+import AjaxLoader from '../ajaxLoader/AjaxLoader';
 import '../listaFamiliasProfesionales/ListaFamiliasProfesionales.css';
 
 const ListaProyectos = ({ codigosActivados }) => {
 
-    const proyectos = useProyectos();
+    const { proyectos, buscando } = useProyectos();
 
     function mostrarProyectos(proyecto) {
         
@@ -41,7 +42,7 @@ const ListaProyectos = ({ codigosActivados }) => {
                 </div>
             </div>
             <div className='row'>
-                {proyectos.map(mostrarProyectos)}
+                {buscando ? <AjaxLoader /> : proyectos.map(mostrarProyectos)}
             </div>
         </>
 

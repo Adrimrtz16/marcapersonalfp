@@ -7,16 +7,19 @@ import Estudiante from './paginas/estudiante/Estudiante'
 import {Routes, Route} from 'react-router-dom'
 import EmpresaProyectos from './paginas/empresaProyectos/EmpresaProyectos'
 import EmpresaAlumnos from './paginas/empresaAlumnos/EmpresaAlumnos'
+import { useState } from 'react'
 
 function App() {
+
+  const [idioma, setIdioma] = useState('español');
 
   return (
 
     <div className='container-fluid'>
-      <Cabecera></Cabecera>
+      <Cabecera setIdioma={setIdioma}></Cabecera>
 
       <Routes>
-        <Route path="" element={<Home></Home>}></Route>
+        <Route path="" element={<Home idioma={idioma}></Home>}></Route>
         <Route path="/empresa" element={<Empresa></Empresa>}></Route>
         <Route path="/empresa/proyectos" element={<EmpresaProyectos></EmpresaProyectos>}></Route>
         <Route path="/empresa/alumnos" element={<EmpresaAlumnos></EmpresaAlumnos>}></Route>

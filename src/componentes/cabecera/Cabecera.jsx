@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png';
 import Idiomas from '../idiomas/Idiomas';
 import { Link } from 'react-router-dom';
 
-const Cabecera = () => {
+const Cabecera = ({setIdioma}) => {
 
     return (
         <div className="row cabecera">
@@ -16,7 +16,7 @@ const Cabecera = () => {
                 <h1 className='marcaPersonal'>Marca Personal FP</h1>
             </div>
             <div className='col-md-1'>
-                <Idiomas></Idiomas>
+                <Idiomas setIdioma={setIdioma}></Idiomas>
             </div>
         </div>
     );

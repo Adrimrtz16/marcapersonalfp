@@ -1,12 +1,13 @@
+import { useState } from 'react';
 import Cuerpo from '../../componentes/cuerpo/Cuerpo';
 import Pie from '../../componentes/pie/Pie';
 
-const Home = () => {
+const Home = ({idioma}) => {
 
     return (
         <div>
             <Cuerpo></Cuerpo>
-            <Pie></Pie>
+            <Pie idioma={idioma}></Pie>
         </div>
     )
 }    

@@ -6,8 +6,9 @@ import tiktok from '../../assets/tiktok.svg'
 import youtube from '../../assets/youtube.svg'
 import logoReves from '../../assets/logoReves.png'
 import useContador from '../../hooks/useContador'
+import traduccion from '../../mocks/mock-idiomas'
 
-const Pie = (props) => {
+const Pie = ({idioma}) => {
 
     const contadores = useContador();
 
@@ -18,15 +19,15 @@ const Pie = (props) => {
                 <div className="col-md-8 naranja">
                     <div className='row'>
                         <div className='col-md-4 text-center'>
-                            <h4>Empresas</h4>
+                            <h4>{traduccion[idioma].empresas}</h4>
                             <h2>{contadores.numEmpresas}</h2> 
                         </div>
                         <div className='col-md-4 text-center'>
-                            <h4>Proyectos</h4>       
+                            <h4>{traduccion[idioma].proyectos}</h4>       
                             <h2>{contadores.numProyectos}</h2> 
                         </div>
                         <div className='col-md-4 text-center'>
-                            <h4>Estudiantes</h4>
+                            <h4>{traduccion[idioma].estudiantes}</h4>
                             <h2>{contadores.numEstudiantes}</h2> 
                         </div>
                     </div>
