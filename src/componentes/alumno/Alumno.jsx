@@ -1,8 +1,7 @@
-import ImgProyecto from '../../assets/ImgProyecto.webp';
+import ImgAlumno from '../../assets/imgAlumno.webp';
 
 const Alumno = (props) => {
 
-    console.log(props.curriculo);
     function mostrarIdiomas(idiomas) {
         
         return idiomas.map((idioma, index) => (
@@ -20,7 +19,7 @@ const Alumno = (props) => {
         <div className="col-md-3">
             <div className="row margen-proyecto gris proyecto">
                 <div className="col-md-5">
-                    <img className='img-proyecto' src={ImgProyecto} alt="Imagen de la familia profesional" />
+                    <img className='img-proyecto' src={ImgAlumno} alt="Imagen de la familia profesional" />
                 </div>
                 <div className='col-md 7'>
                     <p className='margen-titulo'>{props.nombre}</p>
@@ -34,10 +33,10 @@ const Alumno = (props) => {
                                     <p className='margen-lista-alumnos'><strong>Ciclos: </strong>{mostrarCiclos(props.ciclos)}</p>
                                 </div>
                             </div>
-                            <p>{props.curriculo}</p>
                         </div>
                     </div>
                 </div>
+                <p className='padding-titulo'>{props.curriculo}</p>
             </div>
         </div>
     )
