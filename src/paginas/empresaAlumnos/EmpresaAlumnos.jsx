@@ -2,6 +2,7 @@ import { useState } from "react";
 import Empresa from "../empresa/Empresa";
 import ListaFamiliasProfesionales from "../../componentes/listaFamiliasProfesionales/ListaFamiliasProfesionales";
 import ListaCompetencias from "../../componentes/listaCompetecias/ListaCompetencias";
+import ListaAlumnos from "../../componentes/listaAlumnos/ListaAlumnos";
 
 const EmpresaAlumnos = () => {
 
@@ -21,7 +22,8 @@ const EmpresaAlumnos = () => {
                 setCompetenciasActivadas={setCompetenciasActivadas}>
             </ListaCompetencias>
             <ListaAlumnos
-                competenciasActivadas={competenciasActivadas}>
+                competenciasActivadas={competenciasActivadas}
+                codigosActivados={codigosActivados}>
             </ListaAlumnos>
         </div>
     )

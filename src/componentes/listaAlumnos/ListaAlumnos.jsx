@@ -1,33 +1,32 @@
 import useAlumnos from '../../hooks/useAlumnos';
-import Alumno from '../alumno/alumno';
+import Alumno from '../alumno/Alumno';
 import AjaxLoader from '../ajaxLoader/AjaxLoader';
-import '../listaFamiliasProfesionales/ListaFamiliasProfesionales.css';
 
 const ListaAlumnos = ({ competenciasActivadas }) => {
 
     const { alumnos, buscando } = useAlumnos();
 
     function mostrarAlumnos(alumno) {
-        
-        if (competenciasActivadas.length === 0) {
-            return <Proyecto 
-                        key={proyecto.id} 
-                        nombre={proyecto.nombre}
-                        tutor={proyecto.docente_id} 
-                        ciclos={proyecto.ciclos}
-                        participantes={proyecto.participantes}>
-                    </Proyecto>
-        } else {
-            const tieneCicloActivado = alumno.ciclos.some(ciclo => competenciasActivadas.includes(ciclo.codFamilia));
 
-            if (tieneCicloActivado) {
-                return <Proyecto 
-                            key={proyecto.id} 
-                            nombre={proyecto.nombre}
-                            tutor={proyecto.docente_id} 
-                            ciclos={proyecto.ciclos}
-                            participantes={proyecto.participantes}>
-                        </Proyecto>
+        if (competenciasActivadas.length === 0) {
+            return <Alumno 
+                        key={alumno.id} 
+                        nombre={alumno.nombre}
+                        idiomas={alumno.idiomas}
+                        ciclos={alumno.ciclos}
+                        curriculo={alumno.curriculo.textocurriculum}>
+                    </Alumno>
+        } else {
+            const tieneCompetenciaActivado = alumno.competencias.some(competencia => competenciasActivadas.includes(competencia.id));
+
+            if (tieneCompetenciaActivado) {
+                return <Alumno 
+                            key={alumno.id} 
+                            nombre={alumno.nombre}
+                            idiomas={alumno.idiomas}
+                            ciclos={alumno.ciclos}
+                            curriculo={alumno.curriculo.textocurriculum}>
+                        </Alumno>
             }
 
         }
@@ -42,11 +41,11 @@ const ListaAlumnos = ({ competenciasActivadas }) => {
                 </div>
             </div>
             <div className='row'>
-                {buscando ? <AjaxLoader /> : proyectos.map(mostrarProyectos)}
+                {buscando ? <AjaxLoader /> : alumnos.map(mostrarAlumnos)}
             </div>
         </>
 
     )
 }
 
-export default ListaProyectos;
+export default ListaAlumnos;
