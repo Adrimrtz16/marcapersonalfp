@@ -11,6 +11,7 @@ const EmpresaProyectos = () => {
         <div>
             <Empresa></Empresa>
             <ListaFamiliasProfesionales
+                busqueda='proyectos'
                 codigosActivados={codigosActivados} 
                 setCodigosActivados={setCodigosActivados}>
             </ListaFamiliasProfesionales>

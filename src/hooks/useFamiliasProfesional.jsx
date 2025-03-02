@@ -3,18 +3,22 @@ import { getFamiliasProfesionales } from "../servicios/getFamiliasProfesionales"
 
 const useFamiliaProfesional = () => {
 
-    const [familiaProfesional, setFamiliaProfesional] = useState([]);
+    const [familiasProfesionales, setFamiliaProfesional] = useState([]);
+    const [buscando, setBuscando] = useState(false);
 
     function obtenerFamilias() {
 
+        setBuscando(true);
+
         getFamiliasProfesionales().then(valor => {
             setFamiliaProfesional(valor);
+            setBuscando(false);
         });
     }
 
     useEffect(obtenerFamilias, []);
 
-    return familiaProfesional;
+    return { familiasProfesionales, buscando };
 
 }
 

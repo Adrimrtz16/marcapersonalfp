@@ -5,7 +5,7 @@ const FamiliaProfesional = (props) => {
 
     function mostrarParticipantes(participantes) {
         return participantes.map((participante, index) => (
-            <p className='margen-alumnos' key={index}>{participante.name}</p>
+            <p className='margen-alumnos' key={index}>{participante.nombre} {participante.apellidos}</p>
         ));
     }
 
