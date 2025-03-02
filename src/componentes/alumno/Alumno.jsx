@@ -18,7 +18,7 @@ const Alumno = (props) => {
     return (
         <div className="col-md-3">
             <div className="row margen-proyecto gris proyecto">
-                <div className="col-md-5">
+                <div className="col-10 col-md-5">
                     <img className='img-proyecto' src={ImgAlumno} alt="Imagen de la familia profesional" />
                 </div>
                 <div className='col-md 7'>

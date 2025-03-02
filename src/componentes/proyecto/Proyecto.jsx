@@ -18,10 +18,10 @@ const FamiliaProfesional = (props) => {
     return (
         <div className="col-md-3">
             <div className="row margen-proyecto gris proyecto">
-                <div className="col-md-5">
+                <div className="col-10 col-md-5">
                     <img className='img-proyecto' src={ImgProyecto} alt="Imagen de la familia profesional" />
                 </div>
-                <div className='col-md 7'>
+                <div className='col-10 col-md 7'>
                     <p className='margen-titulo'>{props.nombre}</p>
                     <div className='row'>
                         <div className='col-1'></div>

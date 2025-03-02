@@ -9,17 +9,17 @@ const Cuerpo = () => {
 
     return (
         <div className="row">
-            <div className="col-4 menu">
+            <div className="col-12 col-md-4 menu">
                 <Link to="/empresa" className='link'>
                     <Menu className="" imagen={empresa} texto={'Empresas'}></Menu>
                 </Link>
             </div>
-            <div className="col-4 menu">
+            <div className="col-12 col-md-4 menu">
                 <Link to="/centroeducativo" className='link'>
                     <Menu className="" imagen={colegio} texto={'Centro educativo'}></Menu>  
                 </Link> 
             </div>
-            <div className="col-4 menu">
+            <div className="col-12 col-md-4 menu">
                 <Link to="/estudiante" className='link'>
                     <Menu className="" imagen={estudiante} texto={'Estudiantes'}></Menu>
                 </Link>
